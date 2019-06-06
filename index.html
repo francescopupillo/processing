@@ -3,27 +3,131 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Antonio Pierro - Processign Project</title>
+        <title>Antonio Pierro - Processing Project</title>
         <script src="vendors/processing.min.js"></script>
     </head>
     <body>
-        <h1>Processing project by Antonio</h1>
+        <h1>Processing project by Francesco Pupillo</h1>
         <script type="text/processing">
 
-            // Write your project here
-            
-            // Example
-            void setup() {
-              size(200, 200);
-              background(255);
-            }
-            void draw(){
-                pushMatrix();
-                translate(100, 100);
-                rotate(radians(frameCount * 2  % 360));
-                rect(0, 0, 80, 5);
-                popMatrix();
-            }
+           void setup (){ 
+  background(0);
+  size(500,500);
+}
+  
+
+void draw() 
+{
+  
+  // Quadrato centrale
+  pushMatrix();
+   fill(random (frameCount *0.5),(0),random(frameCount *0.5));
+  stroke(#ffffff);
+  translate(height/2, width/2);
+  rect(-18,-18,35,35);
+  popMatrix();
+  
+ // Primo cerchio 
+  fill(random (255), random (0), 100);
+ stroke (#ffffff);
+ 
+
+pushMatrix();
+
+translate(height/2, width/2);
+rotate(radians(frameCount *-8));
+  rect(20,20,20,20);
+popMatrix();
+
+
+// Secondo cerchio
+
+
+  fill(random (255), random (0), 100);
+ stroke (#ffffff);
+
+
+pushMatrix();
+
+
+translate(height/2, width/2);
+
+rotate(radians(frameCount *6));
+  rect(40,40,20,20);
+
+popMatrix();
+
+// Terzo cerchio
+
+  fill(random (255), random (0), 100);
+ stroke (#ffffff);
+
+
+pushMatrix();
+
+
+translate(height/2, width/2);
+
+rotate(radians(frameCount *-6));
+  rect(60,60,20,20);
+popMatrix();
+
+// Quarto Cerchio
+
+  fill(random (255), random (0), 100);
+ stroke (#ffffff);
+
+
+pushMatrix();
+
+
+translate(height/2, width/2);
+rotate(radians(frameCount *2));
+  rect(80,80,20,20);
+popMatrix();
+
+// Quinto cerchio
+
+ fill(random (255), random (0), 100);
+ stroke (#ffffff);
+
+
+pushMatrix();
+translate(height/2, width/2);
+
+rotate(radians(frameCount *-2));
+  rect(100,100,20,20);
+popMatrix();
+
+// Sesto cerchio
+
+ fill(random (255), random (0), 100);
+ stroke (#ffffff);
+pushMatrix();
+
+
+translate(height/2, width/2);
+rotate(radians(frameCount *4));
+  rect(115,115,20,20);
+popMatrix();
+
+
+// Settimo cerchio
+ fill(random (255), random (0), 100);
+ stroke (#ffffff);
+
+
+pushMatrix();
+
+translate(height/2, width/2);
+rotate(radians(frameCount *-4));
+  rect(133,133,20,20);
+  
+popMatrix();
+
+}
+
+;
             
         </script>
         <canvas></canvas>
